@@ -138,3 +138,43 @@ end
 
 #Q. golden_retriever.special_ability
 #A. Get "special_ability" value from "SpecialAbility" module that include in "Dog" class
+#------------------------------------------------------------------#
+#Objective 11 Create "Zoo" class
+class Zoo
+	def initialize(animals_set = Array.new())
+		raise "Invalid animals set" unless animals_set.kind_of? Array 
+		raise "UnAnimal found" unless animals_set.select { |a|  !a.kind_of? Animal }.count == 0
+
+		@animals_set = Array.new()
+		if (animals_set.count > 0)
+			animals_set.each do |a|	
+				@animals_set.push(a)
+			end
+		end
+	end
+
+	attr_reader :animals_set
+
+	def cats
+	   @animals_set.select { |a|  a.kind_of? Cat }
+	end
+
+	def search(search_by,search_value)
+		case search_by
+			when 'leg'
+				@animals_set.select { |a|  a.legs == search_value }
+			else
+	  			raise "Search criteria not support"
+		end
+	end
+
+	def sample_data
+		sample = Array.new()
+		d = Dog.new('dog 1', 1, 'bark')
+		c = Cat.new('cat 1', 1, 10)
+		b = Bird.new('bird 1', 1)
+		sample.push(d, c, b)
+		sample
+		#use for test
+	end
+end
