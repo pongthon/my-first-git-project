@@ -81,5 +81,5 @@ class Mammal < Animal
 		@legs = legs
 		@baby_food = 'Milk'
 	end
-	attr_accessor :name, :age, :gender, :legs, :baby_food
+	attr_accessor :legs, :baby_food
 end
