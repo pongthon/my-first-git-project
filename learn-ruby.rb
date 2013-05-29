@@ -77,7 +77,6 @@ end
 module Legs
 	attr_reader :legs
 end
-
 class Mammal < Animal
 	include Legs
 	def initialize(name, age, gender = "UnKnow", legs)
@@ -99,4 +98,19 @@ class Bird < Animal
 		#Birds must has 2 legs and 2 wings so no need to recive parameter
 	end
 	attr_reader :wings
+end
+#------------------------------------------------------------------#
+#Objective 8 Create "Dog" class
+module SpecialAbility
+	attr_reader :special_ability
+end
+
+class Dog < Animal
+	include Legs, SpecialAbility
+	def initialize(name, age, gender = "UnKnow", special_ability)
+		super(name, age, gender)
+		@legs = 4
+		@special_ability = special_ability
+	end
+	attr_accessor :best_friend
 end
