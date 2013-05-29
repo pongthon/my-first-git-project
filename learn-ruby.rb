@@ -58,4 +58,17 @@ end
 #------------------------------------------------------------------#
 #Objective 4 Create hash value
 person = { name: "Pongthon", email:"pongthon@outlook.com", colors:['red','black','blue'] }
-puts person
+#puts person
+#------------------------------------------------------------------#
+#Objective 5 Create "Animal" class
+class Animal
+	def initialize(name, age, gender = "UnKnow")
+		raise "Empty name" if name.empty?
+		raise "Invalid age" unless (1..200).include?(age)
+		raise "Invalid gender" unless ["Male", "FeMale", "UnKnow"].include?(gender)
+		@name = name
+		@age = age
+		@gender = gender
+	end
+	attr_accessor :name, :age, :gender
+end
