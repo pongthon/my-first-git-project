@@ -57,5 +57,5 @@ animals.compact.each do |animal|
 end
 #------------------------------------------------------------------#
 #Objective 4 Create hash value
-person = { name: "Pongthon", email:"pongthon@outlok.com", colors:['red','black','blue'] }
+person = { name: "Pongthon", email:"pongthon@outlook.com", colors:['red','black','blue'] }
 puts person
