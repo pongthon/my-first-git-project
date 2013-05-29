@@ -1,4 +1,4 @@
-# ruby comment
+#Objective 1 create 'learningruby.rb'
 class Person
 	def initialize(name, age, status)
 		@name = name
@@ -10,7 +10,7 @@ class Person
 end
 
 module SpecialSkill
-	attr_reader : special_skill
+	attr_reader :special_skill
 end
 
 class Doctor < Person
@@ -34,9 +34,6 @@ class Doctor < Person
 		end
 	end
 end
-hoctor = Doctor.new("Doc", 60, "alive", "M.D")
-puts doctor.skills
-#doctor = Doctor.new("Doc", 60, "alive", "d.D")
 
 class Engineer < Person
 	include SpecialSkill
@@ -46,3 +43,10 @@ class Engineer < Person
 	end
 end
 
+#doctor = Doctor.new("Doc", 60, "alive", "M.D")
+#puts doctor.skills
+#doctor = Doctor.new("Doc", 60, "alive", "d.D")
+#------------------------------------------------------------------#
+#Objective 2 Create Array
+animals = ['Cat', 'Dog', 'Iguana', nil]
+puts animals
