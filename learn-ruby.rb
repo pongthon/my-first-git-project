@@ -72,3 +72,14 @@ class Animal
 	end
 	attr_accessor :name, :age, :gender
 end
+#------------------------------------------------------------------#
+#Objective 6 Create "Mammal" class
+class Mammal < Animal
+	def initialize(name, age, gender = "UnKnow", legs)
+		super(name, age, gender)
+		raise "Invalid legs" unless (1..50).include?(legs)
+		@legs = legs
+		@baby_food = 'Milk'
+	end
+	attr_accessor :name, :age, :gender, :legs, :baby_food
+end
