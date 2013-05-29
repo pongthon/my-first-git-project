@@ -114,3 +114,16 @@ class Dog < Animal
 	end
 	attr_accessor :best_friend
 end
+#------------------------------------------------------------------#
+#Objective 9 Create "Cat" class
+class Cat < Animal
+	include Legs, SpecialAbility
+	def initialize(name, age, gender = "UnKnow", claw_sharp_level)
+		super(name, age, gender)
+		raise "Invalid claw sharp level" unless (1..10).include?(claw_sharp_level)
+		@legs = 4
+		@claw_sharp_level = claw_sharp_level
+		@special_ability = 'Climb the tree'
+	end
+	attr_reader :claw_sharp_level
+end
