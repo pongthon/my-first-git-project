@@ -70,16 +70,33 @@ class Animal
 		@age = age
 		@gender = gender
 	end
-	attr_accessor :name, :age, :gender
+	attr_reader :name, :age, :gender
 end
 #------------------------------------------------------------------#
 #Objective 6 Create "Mammal" class
+module Legs
+	attr_reader :legs
+end
+
 class Mammal < Animal
+	include Legs
 	def initialize(name, age, gender = "UnKnow", legs)
 		super(name, age, gender)
 		raise "Invalid legs" unless (1..50).include?(legs)
 		@legs = legs
 		@baby_food = 'Milk'
 	end
-	attr_accessor :legs, :baby_food
+	attr_reader :baby_food
+end
+#------------------------------------------------------------------#
+#Objective 7 Create "Bird" class
+class Bird < Animal
+	include Legs
+	def initialize(name, age, gender = "UnKnow")
+		super(name, age, gender)
+		@legs = 2
+		@wings = 2
+		#Birds must has 2 legs and 2 wings so no need to recive parameter
+	end
+	attr_reader :wings
 end
