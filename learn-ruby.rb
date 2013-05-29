@@ -49,4 +49,9 @@ end
 #------------------------------------------------------------------#
 #Objective 2 Create Array
 animals = ['Cat', 'Dog', 'Iguana', nil]
-puts animals
+#puts animals
+#------------------------------------------------------------------#
+#Objective 3 Loop Array
+animals.compact.each do |animal|
+	puts animal
+end
