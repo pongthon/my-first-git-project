@@ -127,3 +127,14 @@ class Cat < Animal
 	end
 	attr_reader :claw_sharp_level
 end
+#------------------------------------------------------------------#
+#Objective 10
+# Assume that "golden_retriever" is object value create from Dog class
+#Q. golden_retriever.legs
+#A. Get "legs" value from "Legs" module that include in "Dog" class
+
+#Q. golden_retriever.best_friend
+#A. Get "best_friend" data field value from "Dog" class
+
+#Q. golden_retriever.special_ability
+#A. Get "special_ability" value from "SpecialAbility" module that include in "Dog" class
