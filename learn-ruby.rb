@@ -53,5 +53,9 @@ animals = ['Cat', 'Dog', 'Iguana', nil]
 #------------------------------------------------------------------#
 #Objective 3 Loop Array
 animals.compact.each do |animal|
-	puts animal
+	#puts animal
 end
+#------------------------------------------------------------------#
+#Objective 4 Create hash value
+person = { name: "Pongthon", email:"pongthon@outlok.com", colors:['red','black','blue'] }
+puts person
