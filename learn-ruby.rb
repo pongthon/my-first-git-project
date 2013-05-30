@@ -105,23 +105,21 @@ module SpecialAbility
 	attr_reader :special_ability
 end
 
-class Dog < Animal
-	include Legs, SpecialAbility
+class Dog < Mammal
+	include SpecialAbility
 	def initialize(name, age, gender = "UnKnow", special_ability)
-		super(name, age, gender)
-		@legs = 4
+		super(name, age, gender, 4)
 		@special_ability = special_ability
 	end
 	attr_accessor :best_friend
 end
 #------------------------------------------------------------------#
 #Objective 9 Create "Cat" class
-class Cat < Animal
-	include Legs, SpecialAbility
+class Cat < Mammal
+	include SpecialAbility
 	def initialize(name, age, gender = "UnKnow", claw_sharp_level)
-		super(name, age, gender)
+		super(name, age, gender, 4)
 		raise "Invalid claw sharp level" unless (1..10).include?(claw_sharp_level)
-		@legs = 4
 		@claw_sharp_level = claw_sharp_level
 		@special_ability = 'Climb the tree'
 	end
@@ -131,7 +129,7 @@ end
 #Objective 10
 # Assume that "golden_retriever" is object value create from Dog class
 #Q. golden_retriever.legs
-#A. Get "legs" value from "Legs" module that include in "Dog" class
+#A. Get "legs" value from "Legs" module that include in "Mammal" class
 
 #Q. golden_retriever.best_friend
 #A. Get "best_friend" data field value from "Dog" class
@@ -141,16 +139,11 @@ end
 #------------------------------------------------------------------#
 #Objective 11 Create "Zoo" class
 class Zoo
-	def initialize(animals_set = Array.new())
+	def initialize(animals_set = [])
 		raise "Invalid animals set" unless animals_set.kind_of? Array 
 		raise "UnAnimal found" unless animals_set.select { |a|  !a.kind_of? Animal }.count == 0
 
-		@animals_set = Array.new()
-		if (animals_set.count > 0)
-			animals_set.each do |a|	
-				@animals_set.push(a)
-			end
-		end
+		@animals_set = animals_set
 	end
 
 	attr_reader :animals_set
@@ -160,21 +153,19 @@ class Zoo
 	end
 
 	def search(search_by,search_value)
-		case search_by
-			when 'leg'
-				@animals_set.select { |a|  a.legs == search_value }
-			else
-	  			raise "Search criteria not support"
+		if (["legs", "name"].include?(search_by))
+			return @animals_set.select { |a|  a.send(search_by) == search_value }
+		else
+			raise "Search criteria not support"
 		end
 	end
-
-	def sample_data
-		sample = Array.new()
-		d = Dog.new('dog 1', 1, 'bark')
-		c = Cat.new('cat 1', 1, 10)
-		b = Bird.new('bird 1', 1)
-		sample.push(d, c, b)
-		sample
-		#use for test
-	end
 end
+
+# sample = Array.new()
+# d = Dog.new('dog 1', 1, 'bark')
+# c = Cat.new('cat 1', 1, 10)
+# b = Bird.new('bird 1', 1)
+# sample.push(d, c, b)
+		
+# z = Zoo.new(sample)
+# puts z.search('legs',4).inspect
