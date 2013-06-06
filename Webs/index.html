@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Vote project - index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.tagcloud.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
+
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" />	
+	<link rel="stylesheet" href="css/application.css" />
+  <script type="text/javascript">
+  $(document).ready(function() { 
+    $("#tagcloud a").tagcloud({ 
+       size: { 
+         start: 10, 
+         end: 25, 
+         unit: 'px' 
+       }, 
+       color: { 
+         start: "#CDE", 
+         end: "#FS2" 
+       } 
+    });    
+  });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <span class="brand">Vote Project</span>
+        <ul class="nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+            <form class="navbar-form pull-right">
+              <input type="text" class="span2" />
+              <input type="text" class="span2" />
+              <button type="submit" class="btn btn-small">SignIn</button> or <a class="btn btn-small btn-success" href="register.html">SignUp</a>            
+            </form>
+      </div>
+    </div>
+    <div class="top-menu">
+      <h3 class="main-title">Hot topic from</h3>     
+      <div class="btn-group">
+        <button data-toggle="dropdown" class="btn btn-info dropdown-toggle">Select Category <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">category 1</a></li>
+          <li><a href="#">category 2</a></li>
+          <li><a href="#">category 3</a></li>
+          <li><a href="#">category 4</a></li>
+        </ul>
+      </div>
+
+      <form class="form-search pull-right">
+        <label for="btnSearch">Search : </label>
+        <input type="text" class="input-medium search-query" />
+        <div class="btn-group">
+          <button data-toggle="dropdown" class="btn btn-mini btn-info dropdown-toggle">Select Category <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">category 1</a></li>
+            <li><a href="#">category 2</a></li>
+            <li><a href="#">category 3</a></li>
+            <li><a href="#">category 4</a></li>
+          </ul>
+        </div>
+        <button type="submit" class="btn btn-mini">Search</button>
+      </form>
+    </div>
+  </header>
+  <article>
+    <div class="topic-list">
+      <div class="topic">
+        <h2>Vote : <a href="topic.html">Lorem Ipsum is simply dummy text.</a></h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <ul class="thumbnails">
+          <li class="span4">                
+              <a class="thumbnail" href="#">
+                <img class="topic-choice-image" src="images/ios.jpeg" alt="" />
+              </a>
+              <h3>IOS is best</h3>                
+          </li>
+          <li class="span4">
+            <a class="thumbnail" href="#">
+              <img class="topic-choice-image" src="images/android.png" alt="" />
+            </a>
+            <h3>Android is best</h3>
+          </li>
+        </ul>        
+      </div>
+
+      <div class="topic">
+        <h2>Vote : <a href="topic.html">Lorem Ipsum is simply dummy text.</a></h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <ul class="thumbnails">
+              <li class="span4">                
+                  <a class="thumbnail" href="#">
+                    <img class="topic-choice-image" src="images/ios.jpeg" alt="" />
+                  </a>
+                  <h3>IOS is best</h3>                
+              </li>
+              <li class="span4">
+                <a class="thumbnail" href="#">
+                  <img class="topic-choice-image" src="images/android.png" alt="" />
+                </a>
+                <h3>Android is best</h3>
+              </li>
+            </ul>        
+      </div>
+    </div>
+  </article>
+  <footer class="footer">
+    <div class="row-fluid">
+      <div class="span4">
+        <h4>Topic Category</h4>
+        <ul>
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
+          <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 5</a></li>
+        </ul>
+      </div>
+      <div class="span4">
+        <h4>Topic Tags</h4>
+        <div id="tagcloud"> 
+          <a href="#" rel="5">jquery</a> 
+          <a href="#" rel="15">tag</a> 
+          <a href="#" rel="10">cloud</a>
+          <a href="#" rel="8">ruby</a> 
+          <a href="#" rel="7">rails</a> 
+          <a href="#" rel="4">coding</a> 
+          <a href="#" rel="2">testing</a> 
+        </div>
+      </div>
+      <div class="span4">
+        <h4>Contact Us</h4>
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label for="inputEmail">Email</label>
+            <input type="text" id="inputEmail" />
+          </div>
+          <div class="control-group">
+            <label for="inputPassword">Password</label>
+            <textarea row="4"></textarea>
+          </div>
+          <div class="control-group">
+              <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

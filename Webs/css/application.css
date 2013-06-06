@@ -1,0 +1,98 @@
+article
+{
+	padding:0px 30px;
+	clear: both;
+}
+
+.main-title
+{
+	display: inline-block;
+	margin: 0px 10px 10px 0px;
+}
+
+.top-menu 
+{
+	padding:0px 30px;
+	margin-bottom:10px;
+}
+
+#topic-choice .progress
+{
+	width:500px;
+	margin:5px 0px 10px 15px;
+}
+
+#topic-choice .badge
+{
+	margin: 5px 0px 0px 10px;
+}
+
+.controls .thumbnail
+{
+	margin:10px 0px;
+}
+
+.topic-choice-image
+{
+	max-width: 90% !important;
+}
+
+.topic-command
+{
+	margin-right:20px;
+}
+
+
+.topic-command a
+{
+	margin-left:10px;
+}
+
+.topic
+{
+	padding:10px 0px 0px 0px;
+	margin:0px 0px 10px 0px;
+	border-top: #999 solid 2px;
+}
+
+.choice 
+{
+	width:300px;
+}
+
+.choice img
+{
+	display:block;
+	max-width: 300px;
+}
+
+.comment
+{
+	background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    padding: 8px;
+    min-height: 48px;
+    margin-bottom: 20px;
+}
+
+.comment-author
+{
+	margin:0px 20px 20px 0px;
+}
+
+.avatar
+{
+	height: :48px;
+	width: 48px;	
+}
+
+.comment-text
+{
+}
+
+.footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
