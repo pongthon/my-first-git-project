@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Vote Project - topic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery.tagcloud.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
+
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" />	
+	<link rel="stylesheet" href="css/application.css" />
+  <script type="text/javascript">
+  $(document).ready(function() { 
+    $("#tagcloud a").tagcloud({ 
+       size: { 
+         start: 10, 
+         end: 25, 
+         unit: 'px' 
+       }, 
+       color: { 
+         start: "#CDE", 
+         end: "#FS2" 
+       } 
+    });
+  });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <span class="brand">Vote Project</span>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+            <form class="navbar-form pull-right">
+              <input type="text" class="span2" />
+              <input type="text" class="span2" />
+              <button type="submit" class="btn btn-small">SignIn</button> or <a class="btn btn-small btn-success" href="register.html">SignUp</a>            
+            </form>
+      </div>
+    </div>
+    <div class="top-menu">
+      <form class="form-search pull-right">
+        <label for="btnSearch">Search : </label>
+        <input type="text" class="input-medium search-query" />
+        <div class="btn-group">
+          <button data-toggle="dropdown" class="btn btn-mini btn-info dropdown-toggle">Select Category <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">category 1</a></li>
+            <li><a href="#">category 2</a></li>
+            <li><a href="#">category 3</a></li>
+            <li><a href="#">category 4</a></li>
+          </ul>
+        </div>
+        <button type="submit" class="btn btn-mini">Search</button>
+      </form>
+    </div>
+    <div class="clearfix"></div>
+    <div class="topic-command">
+      <a id="edit-topic" href="edit-topic.html" class="btn btn-mini btn-info pull-right">Edit</a>
+      <a id="delete-topic" href="#" class="btn btn-mini btn-danger pull-right">Delete</a>
+    </div>
+  </header>
+  <article>
+    <h2>Vote : <a href="">What is best mobile operating system.</a></h2>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    <div class="accordion" id="topic-choice">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#topic-choice" href="#choice1">IOS is best</a>
+          <div class="progress pull-left">
+            <div class="bar" style="width: 60%;"></div>
+          </div>
+          <span class="badge badge-info pull-left">12 votes</span>
+          <div class="clearfix"></div>
+        </div>
+        <div id="choice1" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <a class="thumbnail" href="#">
+              <img class="topic-choice-image" src="images/ios.jpeg" alt="" />
+            </a>
+            <h3>IOS is best</h3>
+            <div class="choice-info">
+              <span>12 votes.</span>
+              <button class="btn btn-mini btn btn btn-danger pull-right" type="button">Remove your vote!</button>
+              <button style="margin-right:10px;" class="btn btn-mini btn btn btn-info pull-right" type="button">Comment about this.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#topic-choice" href="#choice2">Android is best</a>
+          <div class="progress pull-left">
+            <div class="bar" style="width: 20%;"></div>
+          </div>
+          <span class="badge badge-info pull-left">4 votes</span>
+          <div class="clearfix"></div>
+        </div>
+        <div id="choice2" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <a class="thumbnail" href="#">
+              <img class="topic-choice-image" src="images/android.png" alt="" />
+            </a>
+            <h3>Android is best</h3>
+            <div class="choice-info">
+              <span>4 votes.</span>
+              <button class="btn btn-mini btn btn btn-success pull-right" type="button">Vote!</button>
+              <button style="margin-right:10px;" class="btn btn-mini btn btn btn-info pull-right" type="button">Comment about this.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#topic-choice" href="#choice3">Windows phone 8 is best</a>
+          <div class="progress pull-left">
+            <div class="bar" style="width: 1%;"></div>
+          </div>
+          <span class="badge badge-info pull-left">2 votes</span>
+          <div class="clearfix"></div>
+        </div>
+        <div id="choice3" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <a class="thumbnail" href="#">
+              <img class="topic-choice-image" src="images/windows-phone-8.png" alt="" />
+            </a>
+            <h3>Windows phone 8 is best</h3>
+            <div class="choice-info">
+              <span>2 votes.</span>
+              <button class="btn btn-mini btn btn btn-success pull-right" type="button">Vote!</button>
+              <button style="margin-right:10px;" class="btn btn-mini btn btn btn-info pull-right" type="button">Comment about this.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#topic-choice" href="#choice4">Blackberry 10 is best</a>
+          <div class="progress pull-left">
+            <div class="bar" style="width: 1%;"></div>
+          </div>
+          <span class="badge badge-info pull-left">2 votes</span>
+          <div class="clearfix"></div>
+        </div>
+        <div id="choice4" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <a class="thumbnail" href="#">
+              <img class="topic-choice-image" src="images/blackberry-10.jpg" alt="" />
+            </a>
+            <h3>Blackberry 10 is best</h3>
+            <div class="choice-info">
+              <span>1 votes.</span>
+              <button class="btn btn-mini btn btn btn-success pull-right" type="button">Vote!</button>
+              <button style="margin-right:10px;" class="btn btn-mini btn btn btn-info pull-right" type="button">Comment about this.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Total 2 comments</p>
+    <div class="comment-list">
+      <div class="comment">
+        <div class="comment-author pull-left">
+          <img src="images/avatar.jpg" class="avatar" />
+        </div>
+        <p>Pongthon said about this topic at 30 May 2013</p>
+        <div class="comment-text">
+          Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="comment">
+        <div class="comment-author pull-left">
+          <img src="images/avatar.jpg" class="avatar" />
+        </div>
+        <p>Someone  said about android at 29 May 2013</p>
+        <div class="comment-text">
+          Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Leave you comment</legend>
+        <div class="control-group">
+          <label class="control-label">About</label>
+          <div class="controls">
+            <input type="text" id="commentAbout" />
+            <input type="hidden" id="commentAboutId" />
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="commentName">Name</label>
+          <div class="controls">
+            <input type="text" id="commentName" />
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="comment">Comment</label>
+          <div class="controls">
+            <textarea id="comment" rows="8" style="width:500px;"></textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </article>
+  <footer class="footer">
+    <div class="row-fluid">
+      <div class="span4">
+        <h4>Topic Category</h4>
+        <ul>
+          <li><a href="#">Category 1</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
+          <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 5</a></li>
+        </ul>
+      </div>
+      <div class="span4">
+        <h4>Topic Tags</h4>
+        <div id="tagcloud"> 
+          <a href="#" rel="5">jquery</a> 
+          <a href="#" rel="15">tag</a> 
+          <a href="#" rel="10">cloud</a>
+          <a href="#" rel="8">ruby</a> 
+          <a href="#" rel="7">rails</a> 
+          <a href="#" rel="4">coding</a> 
+          <a href="#" rel="2">testing</a> 
+        </div>
+      </div>
+      <div class="span4">
+        <h4>Contact Us</h4>
+        <form class="form-horizontal">
+          <div class="control-group">
+            <label for="inputEmail">Email</label>
+            <input type="text" id="inputEmail" />
+          </div>
+          <div class="control-group">
+            <label for="inputPassword">Password</label>
+            <textarea row="4"></textarea>
+          </div>
+          <div class="control-group">
+              <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
